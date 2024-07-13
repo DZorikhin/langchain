@@ -19,7 +19,7 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-st.title('Langchain Demo With LLAMA API')
+st.title('Langchain Demo With LLAMA2 API')
 input_text = st.text_input("Search the topic you want")
 
 # ollama LLAMA2 LLM
@@ -30,3 +30,4 @@ chain = prompt | llm | output_parser
 
 if input_text:
     st.write(chain.invoke({'question': input_text}))
+
